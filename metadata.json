@@ -1,0 +1,6 @@
+{
+  "name": "Orbit Assistant",
+  "description": "Autonomous on-device personal AI assistant for Android with voice control, device actions, reactive glowing UI, and OmniRoute AI integration.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
