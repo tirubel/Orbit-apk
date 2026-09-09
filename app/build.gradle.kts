@@ -45,7 +45,22 @@ android {
     }
 }
 
+configurations.all {
+    exclude(group = "com.google.guava", module = "listenablefuture")
+}
+
 dependencies {
+    constraints {
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7") {
+            because("kotlin-stdlib includes jdk7/8 since Kotlin 1.8")
+            version { strictly("") }
+        }
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8") {
+            because("kotlin-stdlib includes jdk7/8 since Kotlin 1.8")
+            version { strictly("") }
+        }
+    }
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
@@ -58,7 +73,6 @@ dependencies {
     implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.security.crypto)
-    implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.okhttp)
