@@ -25,7 +25,7 @@ export default function App() {
   const [currentTask, setCurrentTask] = useState<string | null>(null);
   const [lastAction, setLastAction] = useState<ActionItem | null>(null);
   const [isListening, setIsListening] = useState<boolean>(false);
-  const [isPhoneFrame, setIsPhoneFrame] = useState<boolean>(true);
+  const [isPhoneFrame, setIsPhoneFrame] = useState<boolean>(false);
 
   // Device hardware status
   const [deviceStatus, setDeviceStatus] = useState<DeviceStatus>(() =>

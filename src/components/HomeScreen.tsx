@@ -86,17 +86,17 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
 
         {/* Live Audio Visualizer ripples during Voice active */}
         {(isListening || orbitState === 'SPEAKING') && (
-          <div className="flex items-center space-x-1 mt-4">
-            {[40, 75, 100, 60, 90, 45, 80, 50, 70, 30].map((h, i) => (
-              <span
-                key={i}
-                className="w-1 rounded-full bg-cyan-400/80 animate-pulse"
-                style={{
-                  height: `${h * 0.22}px`,
-                  animationDuration: `${0.4 + (i % 4) * 0.15}s`,
-                }}
-              />
-            ))}
+          <div className="flex items-center space-x-1 mt-4 h-6">
+            <span className="w-1 h-3 rounded-full bg-cyan-400/80 animate-pulse" />
+            <span className="w-1 h-5 rounded-full bg-cyan-400/80 animate-pulse" />
+            <span className="w-1 h-6 rounded-full bg-cyan-400/80 animate-pulse" />
+            <span className="w-1 h-4 rounded-full bg-cyan-400/80 animate-pulse" />
+            <span className="w-1 h-6 rounded-full bg-cyan-400/80 animate-pulse" />
+            <span className="w-1 h-3 rounded-full bg-cyan-400/80 animate-pulse" />
+            <span className="w-1 h-5 rounded-full bg-cyan-400/80 animate-pulse" />
+            <span className="w-1 h-4 rounded-full bg-cyan-400/80 animate-pulse" />
+            <span className="w-1 h-5 rounded-full bg-cyan-400/80 animate-pulse" />
+            <span className="w-1 h-2 rounded-full bg-cyan-400/80 animate-pulse" />
           </div>
         )}
 

@@ -194,8 +194,7 @@ export const OrbitCore: React.FC<OrbitCoreProps> = ({
     <div
       id="orbit-core-container"
       onClick={onClick}
-      className="relative flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-105 active:scale-95 select-none"
-      style={{ width: size, height: size }}
+      className="relative flex items-center justify-center cursor-pointer transition-transform duration-300 hover:scale-105 active:scale-95 select-none w-[250px] h-[250px]"
       title={`Orbit Status: ${state}. Click to interact.`}
     >
       <canvas

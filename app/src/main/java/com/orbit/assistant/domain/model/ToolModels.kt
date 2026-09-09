@@ -14,8 +14,8 @@ sealed class ToolResult {
 
     fun toJsonString(): String {
         return when (this) {
-            is Success -> """{"success": true, "message": "$message"}"""
-            is Failure -> """{"success": false, "error": "$error"${'$'}{details?.let { """, "details": "$it"""" } ?: ""}}"""
+            is Success -> "{\"success\": true, \"message\": \"$message\"}"
+            is Failure -> "{\"success\": false, \"error\": \"$error\"" + (if (details != null) ", \"details\": \"$details\"" else "") + "}"
         }
     }
 }
